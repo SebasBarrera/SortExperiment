@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C5D2963-B189-4BA6-B5FC-E331EAF4DAE8}</ProjectGuid>
+    <ProjectGuid>{76F86EAF-6D43-4AB4-9BFA-8D508A75CE1E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SortExperiment</RootNamespace>
-    <AssemblyName>SortExperiment</AssemblyName>
+    <RootNamespace>SortExperiment1</RootNamespace>
+    <AssemblyName>SortExperiment1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Model\SortAlgorithm.cs" />
+    <Compile Include="Ui\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

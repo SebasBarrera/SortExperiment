@@ -20,18 +20,25 @@ namespace SortExperiment1.Model
             // complejidad O (n)^2
             int size = array.Length;
             T[] Bubble = array;
-            for (int i = 0; i < size - 1; i++) // for 1 (n-1)
+            try
             {
-                for (int j = 0; j < size - i - 1; j++) // for 2 (n-2)
+                for (int i = 0; i < size - 1; i++) // for 1 (n-1)
                 {
-                    bool change = ascendencing ? Bubble[j].CompareTo(Bubble[j + 1]) > 0 : Bubble[j].CompareTo(Bubble[j + 1]) < 0;
-                    if (change) // (n-3)
+                    for (int j = 0; j < size - i - 1; j++) // for 2 (n-2)
                     {
-                        T temp = Bubble[j];
-                        Bubble[j] = Bubble[j + 1];
-                        Bubble[j + 1] = temp;
+                        bool change = ascendencing ? Bubble[j].CompareTo(Bubble[j + 1]) > 0 : Bubble[j].CompareTo(Bubble[j + 1]) < 0;
+                        if (change) // (n-3)
+                        {
+                            T temp = Bubble[j];
+                            Bubble[j] = Bubble[j + 1];
+                            Bubble[j + 1] = temp;
+                        }
                     }
                 }
+            }
+            catch (FormatException e)
+            {
+                return null;
             }
             return Bubble;
         }
@@ -44,7 +51,7 @@ namespace SortExperiment1.Model
             {
                 for (int j = i + 1; j > 0; j--)
                 {
-                    bool change = ascendencing ? Insert[j].CompareTo(Insert[j + 1]) > 0 : Insert[j].CompareTo(Insert[j + 1]) < 0;
+                    bool change = ascendencing ? Insert[j].CompareTo(Insert[j - 1]) < 0 : Insert[j].CompareTo(Insert[j - 1]) > 0;
                     if (change)
                     {
                         T temp = array[j - 1];

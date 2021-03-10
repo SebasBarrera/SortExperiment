@@ -5,3 +5,10 @@ C:\Users\Sebastián\source\repos\SortExperiment\SortExperiment1\SortExperiment1\
 C:\Users\Sebastián\source\repos\SortExperiment\SortExperiment1\SortExperiment1\obj\Debug\SortExperiment1.csproj.CoreCompileInputs.cache
 C:\Users\Sebastián\source\repos\SortExperiment\SortExperiment1\SortExperiment1\obj\Debug\SortExperiment1.exe
 C:\Users\Sebastián\source\repos\SortExperiment\SortExperiment1\SortExperiment1\obj\Debug\SortExperiment1.pdb
+D:\ICESI\Integrador I\SortExperiment\SortExperiment1\SortExperiment1\bin\Debug\SortExperiment1.exe.config
+D:\ICESI\Integrador I\SortExperiment\SortExperiment1\SortExperiment1\bin\Debug\SortExperiment1.exe
+D:\ICESI\Integrador I\SortExperiment\SortExperiment1\SortExperiment1\bin\Debug\SortExperiment1.pdb
+D:\ICESI\Integrador I\SortExperiment\SortExperiment1\SortExperiment1\obj\Debug\SortExperiment1.csprojAssemblyReference.cache
+D:\ICESI\Integrador I\SortExperiment\SortExperiment1\SortExperiment1\obj\Debug\SortExperiment1.csproj.CoreCompileInputs.cache
+D:\ICESI\Integrador I\SortExperiment\SortExperiment1\SortExperiment1\obj\Debug\SortExperiment1.exe
+D:\ICESI\Integrador I\SortExperiment\SortExperiment1\SortExperiment1\obj\Debug\SortExperiment1.pdb

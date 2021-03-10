@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortExperiment1.Model
 {
-    class SortAlgorithm
+    public class SortAlgorithm
     {
         private int[] A;
 

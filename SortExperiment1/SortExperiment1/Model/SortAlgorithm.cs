@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace SortExperiment1.Model
 {
-    class SortAlgorithm
+    public class SortAlgorithm<T> where T: IComparable
     {
-        private int[] A;
-
-        public SortAlgorithm(int length)
+       
+        private bool ascendencing { get; set; }
+        public SortAlgorithm(bool ascendencing) 
         {
-            A = new int[length];
+            this.ascendencing = ascendencing;
         }
 
-        public int[] BubbleSort()
+        public T[] BubbleSort(T[] array)
         {
             // complejidad O (n)^2
-            int n = A.Length;
-            int[] Bubble = A;
-            for (int i = 0; i < n - 1; i++) // for 1 (n-1)
+            int size = array.Length;
+            T[] Bubble = array;
+            for (int i = 0; i < size - 1; i++) // for 1 (n-1)
             {
-                for (int j = 0; j < n - i - 1; j++) // for 2 (n-2)
+                for (int j = 0; j < size - i - 1; j++) // for 2 (n-2)
                 {
-                    if (Bubble[j] > Bubble[j + 1]) // (n-3)
+                    bool change = ascendencing ? Bubble[j].CompareTo(Bubble[j + 1]) > 0 : Bubble[j].CompareTo(Bubble[j + 1]) < 0;
+                    if (change) // (n-3)
                     {
-                        int temp = Bubble[j];
+                        T temp = Bubble[j];
                         Bubble[j] = Bubble[j + 1];
                         Bubble[j + 1] = temp;
                     }
@@ -35,12 +36,23 @@ namespace SortExperiment1.Model
             return Bubble;
         }
 
-        public int[] InsertionSort()
+        public T[] InsertionSort(T[] array)
         {
-            int n = A.Length;
-            int[] Insert = A;
-            Console.WriteLine("Hola");
-
+            int size = array.Length;
+            T[] Insert = array;
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = i + 1; j > 0; j--)
+                {
+                    bool change = ascendencing ? Insert[j].CompareTo(Insert[j + 1]) > 0 : Insert[j].CompareTo(Insert[j + 1]) < 0;
+                    if (change)
+                    {
+                        T temp = array[j - 1];
+                        array[j - 1] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
             return Insert;
         }
     }

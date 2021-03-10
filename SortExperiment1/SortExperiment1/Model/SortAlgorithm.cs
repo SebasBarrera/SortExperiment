@@ -39,7 +39,7 @@ namespace SortExperiment1.Model
         {
             int n = A.Length;
             int[] Insert = A;
-
+            Console.WriteLine("Hola");
 
             return Insert;
         }

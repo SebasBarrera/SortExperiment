@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace SortExperiment1.Model
 {
-<<<<<<< HEAD
-    public class SortAlgorithm
-=======
     public class SortAlgorithm<T> where T: IComparable
->>>>>>> 0d1a2b49e815c6ca61fabe837039f528747ff796
     {
        
         private bool ascendencing { get; set; }

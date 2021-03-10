@@ -7,52 +7,52 @@ namespace Test.Model
     [TestClass]
     public class UnitTest1
     {
-        private SortAlgorithm asc;
-        private SortAlgorithm des;
+        private SortAlgorithm<int> asc;
+        private SortAlgorithm<int> des;
 
         [TestInitialize]
         public void Initialize()
         {
-            asc = new SortAlgorithm(true);
-            des = new SortAlgorithm(false);
+            asc = new SortAlgorithm<int>(true);
+            des = new SortAlgorithm<int>(false);
         }
 
-        private void setUp1()
+        private void SetUp1()
         {
 
         }
 
-        private void setUp2()
+        private void SetUp2()
         {
 
         }
 
-        private void setUp3()
+        private void SetUp3()
         {
 
         }
 
-        private void setUp4()
+        private void SetUp4()
         {
 
         }
 
-        private void setUp5()
+        private void SetUp5()
         {
 
         }
 
-        private void setUp6()
+        private void SetUp6()
         {
 
         }
 
-        private void setUp7()
+        private void SetUp7()
         {
 
         }
 
-        private void setUp8()
+        private void SetUp8()
         {
 
         }
@@ -60,146 +60,184 @@ namespace Test.Model
         [TestMethod]
         public void BubbleSortTest1()
         {
-            setUp1();
+            SetUp1();
         }
 
         [TestMethod]
         public void BubbleSortTest2()
         {
-            setUp1();
+            SetUp2();
         }
 
         [TestMethod]
         public void BubbleSortTest3()
         {
-            setUp1();
+            SetUp3();
         }
 
         [TestMethod]
         public void BubbleSortTest4()
         {
-            setUp1();
+            SetUp2();
         }
 
         [TestMethod]
         public void BubbleSortTest5()
         {
-            //setUpNNN();
+            SetUp3();
         }
 
         [TestMethod]
         public void BubbleSortTest6()
         {
-            setUp1();
+            SetUp1();
         }
 
         [TestMethod]
         public void BubbleSortTest7()
         {
-            setUp2();
+            SetUp2();
         }
 
         [TestMethod]
         public void BubbleSortTest8()
         {
-            setUp4();
+            SetUp3();
         }
 
         [TestMethod]
         public void BubbleSortTest9()
         {
-            setUp5();
+            SetUp2();
         }
 
         [TestMethod]
         public void BubbleSortTest10()
         {
-            //setUpNNNN();
+            SetUp3();
         }
 
         [TestMethod]
         public void BubbleSortTest11()
         {
-            setUp6();
+            SetUp4();
         }
 
         [TestMethod]
         public void BubbleSortTest12()
         {
-            setUp7();
+            SetUp5();
+        }
+
+        [TestMethod]
+        public void BubbleSortTest13()
+        {
+            SetUp6();
+        }
+
+        [TestMethod]
+        public void BubbleSortTest14()
+        {
+            SetUp7();
+        }
+
+        [TestMethod]
+        public void BubbleSortTest15()
+        {
+            SetUp8();
         }
 
         [TestMethod]
         public void InsertionSortTest1()
         {
-            setUp1();
+            SetUp1();
         }
 
         [TestMethod]
         public void InsertionSortTest2()
         {
-            setUp2();
+            SetUp2();
         }
 
         [TestMethod]
         public void InsertionSortTest3()
         {
-            setUp3();
+            SetUp3();
         }
 
         [TestMethod]
         public void InsertionSortTest4()
         {
-            //setUp1VOYACA();
+            SetUp2();
         }
 
         [TestMethod]
         public void InsertionSortTest5()
         {
-            //setUpNNN();
+            SetUp3();
         }
 
         [TestMethod]
         public void InsertionSortTest6()
         {
-            setUp1();
+            SetUp1();
         }
 
         [TestMethod]
         public void InsertionSortTest7()
         {
-            setUp2();
+            SetUp2();
         }
 
         [TestMethod]
         public void InsertionSortTest8()
         {
-            setUp4();
+            SetUp3();
         }
 
         [TestMethod]
         public void InsertionSortTest9()
         {
-            setUp5();
+            SetUp2();
         }
 
         [TestMethod]
         public void InsertionSortTest10()
         {
-            //setUpNNNN();
+            SetUp3();
         }
 
         [TestMethod]
         public void InsertionSortTest11()
         {
-            setUp6();
+            SetUp4();
         }
 
         [TestMethod]
         public void InsertionSortTest12()
         {
-            setUp7();
+            SetUp5();
         }
+
+        [TestMethod]
+        public void InsertionSortTest13()
+        {
+            SetUp6();
+        }
+
+        [TestMethod]
+        public void InsertionSortTest14()
+        {
+            SetUp7();
+        }
+
+        [TestMethod]
+        public void InsertionSortTest15()
+        {
+            SetUp8();
+        }
+
+
 
     }
 }

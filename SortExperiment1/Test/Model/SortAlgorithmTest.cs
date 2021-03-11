@@ -330,9 +330,9 @@ namespace Test.Model
             int[] resultado = asc.InsertionSort(testArray);
             for (int i = 0; i < resultado.Length - 1; i++)
             {
-                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+                Assert.IsTrue(resultado[i] <= resultado[i + 1]);
             }
-            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
+            Assert.IsTrue(resultado[resultado.Length - 2] <= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
@@ -431,7 +431,7 @@ namespace Test.Model
             SetUp7();
             int[] resultado = asc.InsertionSort(testArray);
             int[] esperado = { 4 };
-            Assert.Equals(esperado[0], resultado[0]);
+            Assert.AreEqual(esperado[0], resultado[0]);
         }
 
         [TestMethod]

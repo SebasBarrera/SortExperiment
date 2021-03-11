@@ -60,7 +60,8 @@ namespace Test.Model
 
         private void SetUp6()
         {
-            int[] A = { };
+            asc = new SortAlgorithm<Int32>(true);
+            int[] A = {  };
             testArray = A;
         }
 
@@ -96,7 +97,6 @@ namespace Test.Model
             int[] resultado = asc.BubbleSort(testArray);
             for (int i = 0; i < resultado.Length - 1; i++)
             {
-                Console.WriteLine("i");
                 Assert.IsTrue(resultado[i] <= resultado[i + 1]);
             }
             Assert.IsTrue(resultado[resultado.Length - 2] <= resultado[resultado.Length - 1]);
@@ -121,7 +121,6 @@ namespace Test.Model
             int[] resultado = des.BubbleSort(testArray);
             for (int i = 0; i < resultado.Length - 1; i++)
             {
-                Console.WriteLine("i");
                 Assert.IsTrue(resultado[i] >= resultado[i + 1]);
             }
             Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
@@ -155,54 +154,111 @@ namespace Test.Model
         public void BubbleSortTest7()
         {
             SetUp2();
+            Array.Sort(testArray);
+            int[] resultado = des.BubbleSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void BubbleSortTest8()
         {
             SetUp3();
+            Array.Sort(testArray);
+            int[] resultado = des.BubbleSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void BubbleSortTest9()
         {
             SetUp2();
+            int[] resultado = des.BubbleSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void BubbleSortTest10()
         {
             SetUp3();
+            int[] resultado = des.BubbleSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void BubbleSortTest11()
         {
             SetUp4();
+            int[] resultado = asc.BubbleSort(testArray);
+            int[] esperado = { 5, 6, 7, 8, 9, 10, 11, 12, 13, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+            for (int i = 0; i < resultado.Length; i++)
+            {
+                Assert.AreEqual(esperado[i], resultado[i]);
+            }
         }
 
         [TestMethod]
         public void BubbleSortTest12()
         {
             SetUp5();
+            int[] resultado = asc.BubbleSort(testArray);
+            int[] esperado = { -9, -8, -7, -3, -1, 0, 1, 3, 5, 8, 9, 10, 11, 12, 13, 14, 15 };
+            for (int i = 0; i < resultado.Length; i++)
+            {
+                Assert.AreEqual(esperado[i], resultado[i]);
+            }
         }
 
         [TestMethod]
         public void BubbleSortTest13()
         {
             SetUp6();
+            try
+            {
+                asc.BubbleSort(testArray);
+                Assert.Fail("Excepcion no lanzada");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception lanzada");
+                Console.WriteLine(e.Message);
+            }
         }
 
         [TestMethod]
         public void BubbleSortTest14()
         {
             SetUp7();
+            int[] resultado = asc.InsertionSort(testArray);
+            int[] esperado = { 4 };
+            Assert.AreEqual(esperado[0], resultado[0]);
         }
 
         [TestMethod]
         public void BubbleSortTest15()
         {
             SetUp8();
+            int[] resultado = asc.BubbleSort(testArray);
+            int[] esperado = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            for (int i = 0; i < 10; i++)
+            {
+                Assert.AreEqual(esperado[i], resultado[i]);
+            }
         }
 
         [TestMethod]
@@ -259,7 +315,7 @@ namespace Test.Model
         public void InsertionSortTest5()
         {
             SetUp3();
-            int[] resultado = asc.InsertionSort(testArray);
+            int[] resultado = des.InsertionSort(testArray);
             for (int i = 0; i < resultado.Length - 1; i++)
             {
                 Assert.IsTrue(resultado[i] >= resultado[i + 1]);
@@ -283,54 +339,111 @@ namespace Test.Model
         public void InsertionSortTest7()
         {
             SetUp2();
+            Array.Sort(testArray);
+            int[] resultado = des.InsertionSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void InsertionSortTest8()
         {
             SetUp3();
+            Array.Sort(testArray);
+            int[] resultado = des.InsertionSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void InsertionSortTest9()
         {
             SetUp2();
+            int[] resultado = des.InsertionSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void InsertionSortTest10()
         {
             SetUp3();
+            int[] resultado = des.InsertionSort(testArray);
+            for (int i = 0; i < resultado.Length - 1; i++)
+            {
+                Assert.IsTrue(resultado[i] >= resultado[i + 1]);
+            }
+            Assert.IsTrue(resultado[resultado.Length - 2] >= resultado[resultado.Length - 1]);
         }
 
         [TestMethod]
         public void InsertionSortTest11()
         {
             SetUp4();
+            int[] resultado = asc.InsertionSort(testArray);
+            int[] esperado = { 5, 6, 7, 8, 9, 10, 11, 12, 13, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 };
+            for (int i = 0; i < resultado.Length; i++)
+            {
+                Assert.AreEqual(esperado[i], resultado[i]);
+            }
         }
 
         [TestMethod]
         public void InsertionSortTest12()
         {
             SetUp5();
+            int[] resultado = asc.InsertionSort(testArray);
+            int[] esperado = { -9, -8, -7, -3, -1, 0, 1, 3, 5, 8, 9, 10, 11, 12, 13, 14, 15 };
+            for (int i = 0; i < resultado.Length; i++)
+            {
+                Assert.AreEqual(esperado[i], resultado[i]);
+            }
         }
 
         [TestMethod]
         public void InsertionSortTest13()
         {
             SetUp6();
+            try
+            {
+                asc.InsertionSort(testArray);
+                Assert.Fail("Excepcion no lanzada");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception lanzada");
+                Console.WriteLine(e.Message);
+            }
         }
 
         [TestMethod]
         public void InsertionSortTest14()
         {
             SetUp7();
+            int[] resultado = asc.InsertionSort(testArray);
+            int[] esperado = { 4 };
+            Assert.Equals(esperado[0], resultado[0]);
         }
 
         [TestMethod]
         public void InsertionSortTest15()
         {
             SetUp8();
+            int[] resultado = asc.InsertionSort(testArray);
+            int[] esperado = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            for (int i = 0; i < 10; i++)
+            {
+                Assert.AreEqual(esperado[i], resultado[i]);
+            }
         }
 
 

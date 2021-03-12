@@ -17,28 +17,21 @@ namespace SortExperiment1.Model
 
         public T[] BubbleSort(T[] array)
         {
-            // complejidad O (n)^2
             int size = array.Length;
             T[] Bubble = array;
-            try
+
+            for (int i = 0; i < size - 1; i++) 
             {
-                for (int i = 0; i < size - 1; i++) // for 1 (n-1)
+                for (int j = 0; j < size - i - 1; j++)
                 {
-                    for (int j = 0; j < size - i - 1; j++) // for 2 (n-2)
+                    bool change = ascendencing ? Bubble[j].CompareTo(Bubble[j + 1]) > 0 : Bubble[j].CompareTo(Bubble[j + 1]) < 0;
+                    if (change) 
                     {
-                        bool change = ascendencing ? Bubble[j].CompareTo(Bubble[j + 1]) > 0 : Bubble[j].CompareTo(Bubble[j + 1]) < 0;
-                        if (change) // (n-3)
-                        {
-                            T temp = Bubble[j];
-                            Bubble[j] = Bubble[j + 1];
-                            Bubble[j + 1] = temp;
-                        }
+                        T temp = Bubble[j];
+                        Bubble[j] = Bubble[j + 1];
+                        Bubble[j + 1] = temp;
                     }
                 }
-            }
-            catch (FormatException e)
-            {
-                return null;
             }
             return Bubble;
         }
